@@ -1,0 +1,522 @@
+IF-ELSE:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+   int a= input.nextInt();
+  if(a>18)
+  {
+      System.out.println("eligible");
+  }
+      else
+          System.out.println("Not eligible");
+}
+    
+}
+
+NESTED IF:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+   int marks= input.nextInt();
+   int income= input.nextInt();
+   
+  if(marks>85)
+  {
+      if(income<500000)
+      {
+      System.out.println("eligible");
+  }
+  }
+       else{
+          System.out.println("Not eligible"); 
+}    
+}
+}
+
+
+
+
+
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);        
+   int age= input.nextInt();
+   int weight= input.nextInt();
+   
+ //if(age>18 && weight<=50 )
+
+  if(age>18)
+  {
+      if(weight<=50);
+      {
+      System.out.println("eligible");
+  }
+  }
+      else{
+          System.out.println("Not eligible");
+      }
+  
+}
+    
+}
+
+
+ARRAY:
+(1)...Single Dimensional array:
+
+class Main {
+    public static void main(String[] args) {
+      int arr[]={1,4,5,8,9};
+      int count=0;
+      for(int i=0;i<arr.length;i++){
+          count++;
+          
+          System.out.println(count);
+      }
+    }
+}
+
+
+(2)...Multi Dimensional array:
+
+class Main {
+    public static void main(String[] args) {
+      int arr[][]={{1,4,5,8,9},{11,12,13,14,15}};
+      //int count=0;
+      for(int i=0;i<arr.length;i++){
+           for(int j=0;j<arr[i].length;j++){
+          System.out.print(arr[i][j]+" ");
+      }
+      System.out.println(" ");
+    }
+}
+}
+
+
+PROGRAM:
+
+(1)....Movie Ticket Discount: Write a program that calculates the final ticket price.
+A theater offers a discount based on age:
+	*Below 12 years 50% discount, 
+	*60 years or above 30% discount, 
+	*Others No discount.
+
+source code:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);        
+   int age= input.nextInt();
+   int discount=0;
+   
+ //if(age>18 && weight<=50 )
+
+  if(age<12){
+      discount=50;
+  }
+  else if(age>=60)
+      discount=30;
+  
+  if (discount>0) {
+        System.out.println("eligible  "+discount );
+        } else 
+            System.out.println(" not eligible ");
+        
+  
+}
+    
+}
+
+2)....Loan Approval:Write a program to check loan eligibility.
+A bank approves a loan if:
+	*The applicant is at least 21 years old.
+	*Their monthly salary is 30,000 or more.
+	*If the salary is less than 30,000 but greater than 20,000, 
+	*they must have a good credit score (above 750).
+
+
+SOURCE CODE:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);  
+        System.out.println("age:");
+   int age= input.nextInt();
+   System.out.println("salary:");
+   int salary=input.nextInt();
+   System.out.println("credit:");
+   int credit=input.nextInt();
+   
+ //if(age>18 && weight<=50 )
+
+  if(age>20 && salary>20000 && salary<30000 && credit >750){
+      
+        System.out.println("eligible  ");
+        } else 
+            System.out.println(" not eligible ");
+        
+  
+}
+    
+}
+
+
+3).......Switch Case / Alternative Conditions
+Traffic Signal Rules:
+Write a program that takes a traffic signal color as input (Red, Yellow, Green) and prints:
+	*"Stop" for Red
+	*"Get Ready" for Yellow
+	*"Go" for Green
+
+SOURCE CODE:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);  
+        System.out.println("color:");
+   String color= input.nextLine();
+   
+ //if(age>18 && weight<=50 )
+ switch(color){
+     case "red":
+          System.out.println("Stop");
+          break;
+     case "yellow":
+          System.out.println("Get Ready");
+          break;
+    case "green":
+          System.out.println("Go");
+          break;
+ }
+ 
+}
+    
+}
+
+4).... Write a java program takes a number from the user and generates an integer between 1 and 7.It displays the weekday name.
+TEST DATA..
+Input number: 3
+Expected output: Wednesday
+
+SOURCE CODE:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);  
+        System.out.println("choice:");
+    int choice= input.nextInt();
+   
+ //if(age>18 && weight<=50 )
+ System.out.println("Expected Output:");
+ switch(choice){
+     case 1:
+          System.out.println("Sunday");
+          break;
+     case 2:
+          System.out.println("Monday");
+          break;
+    case 3:
+          System.out.println("Tuesday");
+          break;
+    case 4:
+          System.out.println("Wednesday");
+          break;
+    case 5:
+          System.out.println("Thursday");
+          break;
+    case 6:
+          System.out.println("Friday");
+          break;
+    case 7:
+          System.out.println("Saturday");
+          break;
+ }
+}   
+}
+
+
+
+5)...... Exam passing criteria:  Write a program that checks if a student has passed or failed.
+A student passes an exam if:
+ 	*They score atleast 40 marks in theory and 30 marks in practical's.
+	* If the theory marks are below 40, they must have atleast 70 marks overall to pass.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println(" Theory:");
+   int theory= input.nextInt();
+        System.out.println(" Practical:");
+   int practical= input.nextInt();
+     int sum=theory+practical;
+ //if(age>18 && weight<=50 )
+
+  if(theory>=40 && practical>=30){
+     System.out.println(" pass");
+  }
+ 
+     if(sum>=70){
+     System.out.println(" pass");
+  }
+  else 
+  System.out.println(" Fail");  
+}
+    
+}
+
+6)............right angled triangled
+
+class Main {
+    public static void main(String[] args) {
+      int n=1;
+      
+      
+      //int count=0;
+      for(int i=0;i<=6;i++){
+           for(int j=0;j<=i;j++){
+         System.out.print(n+ " ");
+                n++;
+      }
+      System.out.println(" ");
+    }
+}
+}
+
+
+
+STRING COMPARISON:
+
+1.TWO STRINGS COMPARISON:
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+       String s1 = new String("Hello");
+       Scanner input = new Scanner(System.in);
+       String s2 = input.nextLine();
+       System.out.println(s1.equals(s2));
+    }
+}
+
+
+2.THREE STRINGS COMPARISON USING LITERALS AND KEYWORD
+String Comparison: Different memory allocation
+class Main {
+    public static void main(String[] args) {
+       String s1= "Java is fun";
+       String s2= "Java is fun";
+       String s3 = new String("Java is fun");
+       System.out.println(s1 == s2);
+       System.out.println(s1 == s3);
+       System.out.println(s2 == s3);
+       System.out.println(s1.equals(s3));
+    }
+}
+
+3.STRING TO PRINT NO.OF.TIMES
+class Main {
+    public static void main(String[] args) {
+        String s1="Java programming";
+        for(int i=0;i<s1.length();i++){
+        System.out.println(s1);
+        }
+        
+    }
+}
+
+4.STRING TO PRINT ONE BY ONE:
+class Main {
+    public static void main(String[] args) {
+        String s1="Java programming";
+        for(int i=0;i<s1.length();i++){
+        System.out.println(s1.charAt(i));
+        }
+        
+    }
+}
+
+5.STRING TO PRINT REVERSE:
+class Main {
+    public static void main(String[] args) {
+        String s1="Java programming";
+        for(int i=s1.length()-1;i>=0;i--){
+        System.out.println(s1.charAt(i));
+        }
+        
+    }
+}
+
+SUBSTRING:
+
+1.class Main {
+    public static void main(String[] args) {
+       String str = "Java programming";
+       System.out.println("Substring from index5:"+str.substring(5));
+       System.out.println("Substring from index0to4:"+str.substring(0,4));
+    }
+}
+
+
+
+INDEXOF:
+
+1.class Main {
+    public static void main(String[] args) {
+        String str="Java programming";
+        System.out.println("Index of 'prog':"+str.indexOf("prog"));
+        System.out.println("Index of 'z':"+str.indexOf('z'));
+    }
+}
+
+REPLACE:
+
+1.class Main {
+    public static void main(String[] args) {
+        String s1="Java programming";
+        System.out.println(s1.replace('a','x'));
+        
+    }
+}
+
+EQUALS:
+
+1.class Main {
+    public static void main(String[] args) {
+        String str1="Java";
+        String str2="Java";
+        System.out.println("Case-sensitive equals:"+str1.equals(str2));
+        System.out.println("Case-sensitive equals:"+str1.equalsIgnore(str2));
+        }
+        
+    }
+}
+
+TRIMMING:
+
+1.class Main {
+    public static void main(String[] args) {
+        String str="Java programming";
+        System.out.println("Before trim:["+str+"]");
+        System.out.println("After trim:["+str.trim()+"]");
+        
+    }
+}
+
+
+INTERN:
+
+TO SAVE STRING FROM HEAP MEMORY TO STRING POOL(MEMORY ALLOCATION):
+1.class Main {
+    public static void main(String[] args) {
+        String s1=new String("Javaprogramming");
+        String s2="Javaprogramming";
+        String s3=s1.intern();
+        System.out.println(s1==s2);
+        System.out.println(s2==s3);
+    }
+}
+
+
+CONTAINS:
+
+1.class Main {
+    public static void main(String[] args) {
+        String str="Javaprogramming";
+        System.out.println("Contins'Java':"+str.contains("Java"));
+        System.out.println("Contins'python':"+str.contains("Python"));
+    }
+}
+
+
+COMPARE:
+
+1.import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String str="123,456,789";
+        String[] arr=str.split(",");
+        System.out.println(arr[0]);
+        int max=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(Integer.parseInt(arr[i])>max)
+            {
+                max=Integer.parseInt(arr[i]);
+                System.out.println("change MAX:"+max);
+            }
+        }
+        System.out.println(max);
+        
+    }
+}
+OUTOUT:
+123
+change MAX:123
+change MAX:456
+change MAX:789
+789
+
+
+2.TO CHECK MAXIMUM VALUE:
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String str = input.nextLine();
+        String[] arr = str.split(",");
+        int max=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(Integer.parseInt(arr[i])>max)
+            {
+                max=Integer.parseInt(arr[i]);
+               
+            }
+        }
+        System.out.println(max);
+        
+    }
+}
+OUTPUT:
+128,456,789
+789
+
+
+3.TO FIND LARGE NUMBER WITHOUT USING SPLIT:
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        int a=10;
+        int max=0;
+        int[] arr={1,2,4,3,5,12,10};
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]>max)
+            {
+                max=arr[i];
+            }
+        }
+        System.out.println(max);
+        
+    }
+}
