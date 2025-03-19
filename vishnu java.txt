@@ -1,5 +1,4 @@
-IF-ELSE:
-
+IF ELSE:
 import java.util.Scanner;
 
 class Main {
@@ -520,3 +519,337 @@ class Main {
         
     }
 }
+
+
+4.STRING APPEND:
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        StringBuffer str = new StringBuffer("Hello");
+        str.append("World");
+        System.out.println(str);
+    }
+}
+
+
+5.TO GET CHARACTER VALUE FROM THE USER:
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner ref = new Scanner(System.in);
+        System.out.println("ENTER YOUR CHAR VALUE");
+        char ch=ref.nextLine().charAt(0);
+        System.out.println(ch);
+    }
+}
+OUTPUT:
+ENTER YOUR CHAR VALUE
+xyz
+x
+
+OBJECT ORIENTED:
+
+1.TWO CLASSES USING STATIC KEYWORD:(sop(classname.variable));
+public class Main {
+    public static void main(String[] args) {
+     System.out.println(Objectoriented.a);
+     Objectoriented.display();
+    }
+    
+}
+class Objectoriented {
+    static int a=10;
+    public static void display()
+    {
+        System.out.println("static method");
+    }
+}
+
+2.TWO CLASSES USING NON-STATIC KEYWORD:
+public class Main {
+    public static void main(String[] args) {
+    Objectoriented ref=new Objectoriented();
+    System.out.println("Nonstatic var:"+ref.name);
+    System.out.println("Nonstatic var:"+ref.Rollno)  ;
+    System.out.println("Static var:"+Objectoriented.a);
+    Objectoriented.display();
+    }
+    
+}
+class Objectoriented {
+    String name="java";
+    String Rollno="2332j38";
+    
+    static int a=10;
+    public static void display()
+    {
+        System.out.println("static method");
+    }
+}
+
+
+
+CONSTRUCTOR:(WITH PARAMETERS):
+
+1.public class Main {
+    public static void main(String[] args) {
+        Sample ref=new Sample();
+    }
+    
+}
+class Sample {
+    Sample()
+    {
+        System.out.println("default constructor");
+    }
+}
+
+
+2.PASS THE ARGUEMENTS USING THIS KEYWORD TO INITIALIZE THE OBJECT:
+class Main {
+    public static void main(String[] args) {
+        Sample ref=new Sample("BMW","M5");
+        System.out.println(ref.carname);
+        System.out.println(ref.carmodel); 
+    }
+    
+}
+class Sample {
+    String carname;
+    String carmodel;
+    
+    Sample(String carname , String carmodel)
+    {
+        this.carname=carname;
+        this.carmodel=carmodel;
+        System.out.println("default constructor");
+    }
+}
+
+3.PASS THE ARGUEMENTS USING THIS KEYWORD TO INITIALIZE THE OBJECT:(MULTIPLE VALUES)
+class Main {
+    public static void main(String[] args) {
+        Sample ref1=new Sample("BMW","M5");
+        Sample ref2=new Sample("TATA","X5");
+        System.out.println(ref1.carname);
+        System.out.println(ref1.carmodel);
+        System.out.println(ref2.carname);
+        System.out.println(ref2.carmodel); 
+    }
+    
+}
+class Sample {
+    String carname;
+    String carmodel;
+    
+    Sample(String carname , String carmodel)
+    {
+        this.carname=carname;
+        this.carmodel=carmodel;
+        System.out.println("default constructor");
+    }
+}
+
+
+CONSTRUCTOR:(ENCAPSULATION)
+1.class Main {
+    public static void main(String[] args) {
+    Account ac=new Account("vishnu",2000);
+    System.out.println("Accountholde Name:"+ac.getAccholder());
+    System.out.println("Holder Balance:"+ac.getBalance());
+    }
+    
+}
+class Account {
+    private String Accholder;
+    private int Balance;
+    Account(String Accholder,int Balance){
+        this.Accholder=Accholder;
+        this.Balance=Balance;
+    }
+    public String getAccholder(){
+        return Accholder;
+    }
+    public int getBalance(){
+        return Balance;
+    }
+    
+}
+
+
+CONSTRUCTOR USING ENCAPSULATION TO UPDATE THE NAME:
+1.class Main {
+    public static void main(String[] args) {
+    Account ac=new Account("vishnu",2000);
+    System.out.println("Accountholde Name:"+ac.getAccholder());
+    System.out.println("Holder Balance:"+ac.getBalance());
+    
+    ac.setAccholder("durga");
+    System.out.println("update Accholder Name:"+ac.getAccholder());
+    }
+    
+}
+class Account {
+    private String Accholder;
+    private int Balance;
+    Account(String Accholder,int Balance)
+    {
+        this.Accholder=Accholder;
+        this.Balance=Balance;
+    }
+    public String getAccholder()
+    {
+        return Accholder;
+    }
+    public int getBalance()
+    {
+        return Balance;
+    }
+    public void setAccholder(String Accholder)
+    {
+        this.Accholder=Accholder;
+    }
+}
+
+
+
+2.class Main {
+    public static void main(String[] args) {
+    Account ac=new Account("vishnu",2000,3000);
+    System.out.println("Accountholder Name:"+ac.getAccholder());
+    System.out.println("Holder Balance:"+ac.getBalance());
+    System.out.println("Holder Credit:"+ac.getCredit());
+    ac.setAccholder("durga");
+    System.out.println("update Accholder Name:"+ac.getAccholder());
+    }
+    
+}
+class Account {
+    private String Accholder;
+    private int Balance;
+    private int Credit;
+    Account(String Accholder,int Balance, int Credit)
+    {
+        this.Accholder=Accholder;
+        this.Balance=Balance;
+        this.Credit=Credit;
+    }
+    public String getAccholder()
+    {
+        return Accholder;
+    }
+    public int getBalance()
+    {
+        return Balance;
+    }
+    public int getCredit()
+    {
+        return Credit;
+    }
+    public void setAccholder(String Accholder)
+    {
+        this.Accholder=Accholder;
+    }
+}
+
+CREDIT WILLBE ADDED:
+1.class Main {
+    public static void main(String[] args) {
+       Account ac = new Account("yogitha",2000,3000);
+       System.out.println("Account holdername:"+ac.getAccholder());
+       System.out.println("Holder balance:"+ac.getBalance());
+       ac.setAccholder("yogi");
+       System.out.println("Updated holder name:"+ac.getAccholder());
+       ac.setBalance(1000);
+        }
+}
+class Account {
+    private String Accholder;
+    private int Balance;
+   
+    Account(String Accholder , int Balance , int Credit)
+    {
+        this.Accholder=Accholder;
+        this.Balance=Balance;
+       
+    }
+   public String getAccholder()
+   {
+       return Accholder;
+   }
+   public int getBalance()
+   {
+       return Balance;
+   }
+   
+   public void setBalance(int amount)
+   {
+       if(Balance>0){
+           Balance+=amount;
+           System.out.println("Deposit successfully otal balance:"+Balance);
+       
+       }
+   }
+   public void setAccholder(String Accholder)
+   {
+       this.Accholder=Accholder;
+   }
+   
+   
+}
+
+
+CONSTRUCTOR USING ENCAPSULATION (WITHDRAW AND CURRENT BALANCE AMOUNT:)
+1.class Main {
+    public static void main(String[] args) {
+       Account ac = new Account("yogitha",2000);
+       System.out.println("Account holdername:"+ac.getAccholder());
+       System.out.println("Holder balance:"+ac.getBalance());
+       ac.setAccholder("yogi");
+       System.out.println("Updated holder name:"+ac.getAccholder());
+       ac.setBalance(1000);
+       System.out.println("Deposit Amount:"+ac.getAccholder());
+       ac.setWidthdraw(2000);
+       System.out.println("Current balancet:"+ac.getAccholder());
+        }
+}
+class Account {
+    private String Accholder;
+    private int Balance;
+   
+    Account(String Accholder , int Balance )
+    {
+        this.Accholder=Accholder;
+        this.Balance=Balance;
+       
+    }
+   public String getAccholder()
+   {
+       return Accholder;
+   }
+   public int getBalance()
+   {
+       return Balance;
+   }
+   public void setWidthdraw(int widthdraw)
+   {
+        Balance -= widthdraw;
+        System.out.println("widthdraw amount:"+widthdraw);
+   }
+   public void setBalance(int amount)
+   {
+       if(Balance>0){
+           Balance-=amount;
+           System.out.println("Deposit successfully Total balance:"+Balance);
+       
+       }
+   }
+   public void setAccholder(String Accholder)
+   {
+       this.Accholder=Accholder;
+   }
+   
+   
+}
+
+   
